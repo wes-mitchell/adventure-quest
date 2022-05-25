@@ -78,6 +78,19 @@ namespace Quest
             {
                 Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
             }
+
+            Console.Write("Would you like to play again? yes/no: " );
+            string answer = Console.ReadLine();
+
+            while(answer.ToUpper() != "NO")
+            {
+                foreach (Challenge challenge in challenges)
+            {
+                challenge.RunChallenge(theAdventurer);
+            }
+                Console.Write("Would you like to play again? yes/no: ");
+                answer = Console.ReadLine();
+            }
         }
     }
 }
