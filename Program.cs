@@ -27,11 +27,11 @@ namespace Quest
 
             Challenge favoriteBeatle = new Challenge(
                 @"Who's your favorite Beatle?
-    1) John
-    2) Paul
-    3) George
-    4) Ringo
-",
+                1) John
+                2) Paul
+                3) George
+                4) Ringo
+                ",
                 4, 20
             );
 
@@ -46,7 +46,7 @@ namespace Quest
             List<string> colors = new List<string>
             {
                 "red",
-                "posh purple"
+                "posh purple",
                 "green",
                 "blue",
                 "purple",
@@ -57,9 +57,13 @@ namespace Quest
                 Colors = colors, 
                 Length = 45
             };
+            Hat hatObj = new Hat
+            {
+                ShininessLevel = 9
+            };
             // Make a new "Adventurer" object using the "Adventurer" class
 
-            Adventurer theAdventurer = new Adventurer(adventurerName, rando);
+            Adventurer theAdventurer = new Adventurer(adventurerName, rando, hatObj);
             
             Console.WriteLine(theAdventurer.GetDescription());
 
