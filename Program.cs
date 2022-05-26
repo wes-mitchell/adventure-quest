@@ -61,11 +61,12 @@ namespace Quest
             {
                 ShininessLevel = 9
             };
+            Prize turtlesComic = new Prize("Ninja Turtles Comic book issue one, 1st edition mate!");
             // Make a new "Adventurer" object using the "Adventurer" class
 
             Adventurer theAdventurer = new Adventurer(adventurerName, rando, hatObj);
-            
             Console.WriteLine(theAdventurer.GetDescription());
+            
 
             // A list of challenges for the Adventurer to complete
             // Note we can use the List class here because have the line "using System.Collections.Generic;" at the top of the file.
@@ -89,18 +90,21 @@ namespace Quest
             if (theAdventurer.Awesomeness >= maxAwesomeness)
             {
                 Console.WriteLine("YOU DID IT! You are truly awesome!");
+                turtlesComic.ShowPrize(theAdventurer);
             }
             else if (theAdventurer.Awesomeness <= minAwesomeness)
             {
                 Console.WriteLine("Get out of my sight. Your lack of awesomeness offends me!");
+                turtlesComic.ShowPrize(theAdventurer);
             }
             else
             {
                 Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
+                turtlesComic.ShowPrize(theAdventurer);
             }
 
-            Console.Write("Would you like to play again? yes/no: " );
-            string answer = Console.ReadLine();
+                Console.Write("Would you like to play again? yes/no: ");
+                string answer = Console.ReadLine();
 
             while(answer.ToUpper() != "NO")
             {
@@ -108,9 +112,26 @@ namespace Quest
             {
                 challenge.RunChallenge(theAdventurer);
             }
+
+            if (theAdventurer.Awesomeness >= maxAwesomeness)
+            {
+                Console.WriteLine("YOU DID IT! You are truly awesome!");
+                turtlesComic.ShowPrize(theAdventurer);
+            }
+            else if (theAdventurer.Awesomeness <= minAwesomeness)
+            {
+                Console.WriteLine("Get out of my sight. Your lack of awesomeness offends me!");
+                turtlesComic.ShowPrize(theAdventurer);
+            }
+            else
+            {
+                Console.WriteLine("I guess you did...ok? ...sorta. Still, you should get out of my sight.");
+                turtlesComic.ShowPrize(theAdventurer);
+            }
                 Console.Write("Would you like to play again? yes/no: ");
                 answer = Console.ReadLine();
             }
+            }
         }
     }
-}
+    
