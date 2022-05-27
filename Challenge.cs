@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Quest
 {
@@ -11,7 +12,6 @@ namespace Quest
         private string _text;
         private int _correctAnswer;
         private int _awesomenessChange;
-
 
         // A constructor for the Challenge
         // We can tell it's a constructor because it has the same name as the class 
