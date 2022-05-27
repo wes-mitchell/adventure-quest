@@ -29,7 +29,6 @@ namespace Quest
         {
             Console.Write($"{_text}: ");
             string answer = Console.ReadLine();
-
             int numAnswer;
             bool isNumber = int.TryParse(answer, out numAnswer);
 
@@ -37,7 +36,7 @@ namespace Quest
             if (isNumber && numAnswer == _correctAnswer)
             {
                 Console.WriteLine("Well Done!");
-
+                adventurer.CorrectCount++;
                 // Note how we access an Adventurer object's property
                 adventurer.Awesomeness += _awesomenessChange;
             }
